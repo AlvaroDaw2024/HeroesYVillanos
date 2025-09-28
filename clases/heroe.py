@@ -1,0 +1,11 @@
+from persona import Persona
+
+class Heroe(Persona):
+
+    def __init__(self,nombre,apellidos, fnac, id, puntuacion,codigoLimpio,bienDocumentado,gitgod,arquitecto,detallista):
+        super().__init__(self,nombre,apellidos,fnac,id,puntuacion)
+        self.codigoLimpio = codigoLimpio
+        self.bienDocumentado = bienDocumentado
+        self.gitgod = gitgod
+        self.arquitecto = arquitecto
+        self.detallista = detallista
