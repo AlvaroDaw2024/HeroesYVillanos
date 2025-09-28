@@ -28,3 +28,6 @@ if __name__ == "__main__":
 
 def crearHeroe():
     pass
+
+def crearVillano():
+    pass
