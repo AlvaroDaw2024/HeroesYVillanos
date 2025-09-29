@@ -7,7 +7,8 @@ import logging
 
 from clases.villano import Villano
 
-
+idPersonajes = 0
+listaPersonajes = []
 def menu():
     print("1) Para crear Heroe")
     print("2) Para crear Villano")
@@ -85,8 +86,7 @@ def gestionAulaDeHeroesYVillanos(opcion):
 
 
 
-idPersonajes = 0
-listaPersonajes = []
+
 
 
 def crearHeroe():
