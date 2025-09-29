@@ -13,8 +13,20 @@ def menu():
     print("3) Para buscar un heroe o villano")
     print("4) Para salir")
 
+def menuFiltro():
+    print('1) Para buscar Heroe')
+    print('2) Para buscar Villano')
+
+def menuFiltroVillano():
+    pass
+
+def menuFiltroHeroe():
+    pass
+
 def gestionAulaDeHeroesYVillanos(opcion):
     pass
+
+
 def main():
     try:
         while True:
@@ -32,25 +44,31 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 def gestionAulaDeHeroesYVillanos(opcion):
     pass
 
+
 idPersonajes = 0
 listaPersonajes = []
+
 
 def crearHeroe():
     nombre = input("Nombre: ")
     apellidos = input("Apellidos: ")
     fecha = sacarFecha()
 
-    codigoLimpio = random.randint(Constantes.VALOR_MINIMO,Constantes.VALOR_MAXIMO)
-    bienDocumentado = random.randint(Constantes.VALOR_MINIMO,Constantes.VALOR_MAXIMO)
-    gitGod = random.randint(Constantes.VALOR_MINIMO,Constantes.VALOR_MAXIMO)
-    arquitecto = random.randint(Constantes.VALOR_MINIMO,Constantes.VALOR_MAXIMO)
-    detallista = random.randint(Constantes.VALOR_MINIMO,Constantes.VALOR_MAXIMO)
-    
-    puntuaciones = [codigoLimpio,bienDocumentado,gitGod,arquitecto,detallista]
-    puntuacion = np.mean(puntuaciones)
+    codigoLimpio = 0
+    bienDocumentado = 0
+    gitGod = 0
+    arquitecto = 0
+    detallista = 0
+
+    atributos = [codigoLimpio, bienDocumentado, gitGod, arquitecto, detallista]
+    for puntuacion in atributos:
+        atributos[puntuacion] = random.randint(Constantes.VALOR_MINIMO, Constantes.VALOR_MAXIMO)
+    puntuacion = np.mean(atributos)
 
     heroe = Heroe(nombre,
                   apellidos,
@@ -59,35 +77,52 @@ def crearHeroe():
                   puntuacion,
                   codigoLimpio,
                   bienDocumentado,
-                  gitGod,arquitecto
-                  ,detallista)
+                  gitGod, arquitecto
+                  , detallista)
     listaPersonajes.append(heroe)
+
 
 def crearVillano():
     nombre = input("Nombre: ")
     apellidos = input("Apellidos: ")
     fecha = sacarFecha()
 
-    chagepeteador = random.randint(Constantes.VALOR_MINIMO, Constantes.VALOR_MAXIMO)
-    entregadorTardio = random.randint(Constantes.VALOR_MINIMO, Constantes.VALOR_MAXIMO)
-    ausencias = random.randint(Constantes.VALOR_MINIMO, Constantes.VALOR_MAXIMO)
-    hablador = random.randint(Constantes.VALOR_MINIMO, Constantes.VALOR_MAXIMO)
+    chagepeteador = 0
+    entregadorTardio = 0
+    ausencias = 0
+    hablador = 0
 
-    puntuaciones = [chagepeteador,entregadorTardio,ausencias,hablador]
-    puntuacion = np.mean(puntuaciones)
+    atributos = [chagepeteador, entregadorTardio, ausencias, hablador]
+    for puntuacion in atributos:
+        atributos[puntuacion] = random.randint(Constantes.VALOR_MINIMO, Constantes.VALOR_MAXIMO)
+    puntuacion = np.mean(atributos)
 
     villano = Villano(nombre,
-                apellidos,
-                fecha,
-                ++idPersonajes,
-                puntuacion,
-                chagepeteador,
-                entregadorTardio,
-                ausencias,
-                hablador)
+                      apellidos,
+                      fecha,
+                      ++idPersonajes,
+                      puntuacion,
+                      chagepeteador,
+                      entregadorTardio,
+                      ausencias,
+                      hablador)
     listaPersonajes.append(villano)
 
+
 def funcionFiltro():
+    while True:
+        menuFiltro()
+        opcion = int(input())
+        if (opcion==1):
+            menuFiltroVillano()
+            pass
+        elif (opcion==2):
+            menuFiltroHeroe()
+            pass
+        else:
+            print('No has elegido una opción valida')
+
+
 
 def sacarFecha():
     try:
