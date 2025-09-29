@@ -8,3 +8,12 @@ class Villano(Persona):
         self.entregadorTardio = entregadorTardio
         self.ausencias = ausencias
         self.hablador = hablador
+
+    def returnChagepeteador(self):
+        return self.chagepeteador
+    def returnEntregadorTardio(self):
+        return self.entregadorTardio
+    def returnHablador(self):
+        return self.hablador
+    def returnAusencias(self):
+        return self.ausencias

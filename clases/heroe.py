@@ -9,3 +9,14 @@ class Heroe(Persona):
         self.gitgod = gitgod
         self.arquitecto = arquitecto
         self.detallista = detallista
+
+    def returnCodigoLimpio(self):
+        return self.codigoLimpio
+    def returnBienDocumentado(self):
+        return self.bienDocumentado
+    def returnGitgod(self):
+        return self.gitgod
+    def returnArquitecto(self):
+        return self.arquitecto
+    def returnDetallista(self):
+        return self.detallista
