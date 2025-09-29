@@ -17,3 +17,6 @@ class Villano(Persona):
         return self.hablador
     def returnAusencias(self):
         return self.ausencias
+
+    def __str__(self):
+        return f'Heroe ' + super().__str__()

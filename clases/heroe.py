@@ -20,3 +20,7 @@ class Heroe(Persona):
         return self.arquitecto
     def returnDetallista(self):
         return self.detallista
+
+    def __str__(self):
+        return f'Heroe ' + super().__str__()
+    #esto lo he pensado yo, no se si esta correcto
